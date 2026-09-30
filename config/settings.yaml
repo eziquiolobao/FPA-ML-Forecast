@@ -1,0 +1,25 @@
+# Global settings for the FP&A rolling-forecast pipeline.
+company:
+  name: "Altair Cloud, Inc."        # fictional B2B SaaS company - all data is synthetic
+  reporting_currency: USD
+
+simulation:
+  seed: 20260930
+  history_start: "2021-01"          # first month of ERP history
+  simulation_end: "2031-12"         # hidden "true" business is simulated this far out
+  anomalies_start: "2022-01"        # injected anomalies (answer key) start here
+
+# Latest closed accounting period. Use "auto" to pick the last completed calendar month.
+as_of: "2026-08"
+
+forecast:
+  horizon: 12                       # months ahead in each rolling forecast
+  backtest_origins: 24              # month-ends replayed in the rolling-origin backtest
+  min_prior_origins: 12             # scored origins needed before trusting a champion
+  levels: [80, 95]                  # prediction-interval coverage levels (%)
+
+paths:
+  raw: data/raw
+  warehouse: data/warehouse/fpa.duckdb
+  marts: data/marts
+  reports: reports

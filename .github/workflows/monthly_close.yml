@@ -1,0 +1,53 @@
+name: Monthly close
+
+# After each month-end close: rebuild the P&L, re-run the forecast tournament and the variance
+# flags, then commit the refreshed marts. Streamlit Community Cloud redeploys on the new commit,
+# so the live dashboard rolls forward on its own.
+on:
+  schedule:
+    - cron: "0 12 3 * *" # 12:00 UTC on the 3rd of every month
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: "Close period (YYYY-MM) or 'auto' for the last completed month"
+        required: false
+        default: "auto"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monthly-close
+  cancel-in-progress: false
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      AS_OF: ${{ github.event.inputs.as_of || 'auto' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Run the monthly close pipeline
+        run: uv run python -m fpa.pipeline run --as-of "$AS_OF" --n-jobs 2
+      - name: Verify (data integrity and rules; headline claims are checked on push)
+        run: uv run pytest -m "not claims"
+      - name: Refresh notebooks
+        run: uv run jupyter nbconvert --to notebook --execute --inplace notebooks/*.ipynb
+      - name: Commit refreshed outputs
+        run: |
+          CLOSED=$(python3 -c "import json;print(json.load(open('data/marts/run_metadata.json'))['as_of'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/marts reports notebooks
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Monthly close: $CLOSED"
+            git push
+          fi

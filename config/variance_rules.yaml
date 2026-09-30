@@ -1,0 +1,28 @@
+# Variance flagging rules. A line is MATERIAL when BOTH the $ and % thresholds are breached.
+# Thresholds apply to the monthly variance vs budget; YTD thresholds are scaled by ytd_multiplier.
+default:
+  abs_usd: 50000
+  pct: 0.10
+
+by_fs_line:
+  Subscription Revenue:
+    abs_usd: 150000
+    pct: 0.03
+  Services Revenue:
+    abs_usd: 75000
+    pct: 0.10
+  Personnel:
+    abs_usd: 75000
+    pct: 0.05
+  Hosting:
+    abs_usd: 50000
+    pct: 0.08
+
+ytd_multiplier: 2.0
+
+# Statistical surprise: actual falls outside this prediction interval of last month's forecast.
+surprise_level: 95
+
+# Persistent drift: same-direction variance of at least `pct` and half the `abs_usd` threshold,
+# for this many consecutive months.
+drift_months: 3

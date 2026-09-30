@@ -1,0 +1,5 @@
+# Lightweight dependencies for the Streamlit Community Cloud app (reads precomputed marts only)
+streamlit==1.64.0
+pandas==2.3.3
+plotly==7.1.0
+pyarrow==25.0.1
