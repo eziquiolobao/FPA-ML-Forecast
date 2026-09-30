@@ -8,3 +8,6 @@ __pycache__/
 data/raw/
 data/warehouse/
 *.egg-info/
+
+# personal interview notes (kept out of the public repo)
+docs/talk_track.md

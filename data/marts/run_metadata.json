@@ -1,6 +1,6 @@
 {
   "as_of": "2026-08",
-  "company": "Altair Cloud, Inc.",
+  "company": "EZ Tech, Inc.",
   "generate": {
     "gl_lines": 89049,
     "journal_entries": 12865,
@@ -90,8 +90,8 @@
     "budget_wape": 0.1031,
     "improvement_vs_budget": 0.1956
   },
-  "last_run_utc": "2026-09-30 18:29 UTC",
-  "runtime_seconds": 197,
+  "last_run_utc": "2026-09-30 18:39 UTC",
+  "runtime_seconds": 159,
   "variance": {
     "current_month": {
       "Red": 0,

@@ -50,7 +50,7 @@ ITEM_DESC = {
     "annual_renewals": "Annual software renewal", "auto_renewal": "Enterprise tier renewal",
     "dev_tools": "Developer tooling", "demand_gen": "Paid media & demand gen",
     "unapproved_campaign": "Brand campaign", "trade_show": "SaaS Summit booth & sponsorship",
-    "user_conference": "Altair Connect user conference", "field_events": "Field events & webinars",
+    "user_conference": "EZ Tech Connect user conference", "field_events": "Field events & webinars",
     "rent": "Office rent", "facility_services": "Cleaning & facility services", "audit": "Annual financial audit",
     "tax_advisory": "Tax advisory services", "outside_counsel": "Outside legal counsel",
     "legal_settlement": "Settlement - contract dispute", "recruiting": "Recruiting fees & job boards",

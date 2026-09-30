@@ -1,6 +1,6 @@
 # Global settings for the FP&A rolling-forecast pipeline.
 company:
-  name: "Altair Cloud, Inc."        # fictional B2B SaaS company - all data is synthetic
+  name: "EZ Tech, Inc."             # fictional B2B SaaS company - all data is synthetic
   reporting_currency: USD
 
 simulation:

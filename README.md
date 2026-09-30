@@ -9,7 +9,7 @@ An end-to-end analytics project for **Financial Planning & Analysis (FP&A)**. It
 
 > Every month, after the books close, the system rebuilds the P&L from the ledger. It re-forecasts the next 12 months with whichever method has been most accurate for each line, and flags the lines that are both **material** and **outside the expected range**. Each flag comes with a first-draft explanation for the budget owner.
 
-*All data is synthetic, generated for a fictional B2B SaaS company ("Altair Cloud, Inc.").*
+*All data is synthetic, generated for a fictional B2B SaaS company ("EZ Tech, Inc.").*
 
 ---
 
@@ -93,7 +93,7 @@ app/             Streamlit dashboard (reads data/marts only)
 data/marts/      small parquet outputs committed for the app (raw data is regenerated, not committed)
 reports/         monthly Excel variance pack
 tests/           pytest suite
-docs/            talk_track.md (interview pitch & Q&A), data_dictionary.md
+docs/            data_dictionary.md, images/
 ```
 
 ## Design choices worth discussing
@@ -107,7 +107,3 @@ docs/            talk_track.md (interview pitch & Q&A), data_dictionary.md
 ## Tech stack
 
 Python 3.12 · pandas · DuckDB · pandera · statsforecast / mlforecast (Nixtla) · LightGBM · statsmodels · Plotly · Streamlit · openpyxl · pytest · ruff · uv · GitHub Actions
-
----
-
-See [`docs/talk_track.md`](docs/talk_track.md) for a 2-minute non-technical pitch, a 5-minute technical walkthrough and likely interview questions.

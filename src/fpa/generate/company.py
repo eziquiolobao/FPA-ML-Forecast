@@ -6,9 +6,9 @@ import pandas as pd
 
 ENTITIES = pd.DataFrame(
     [
-        ("US01", "Altair Cloud, Inc.", "USD", "United States"),
-        ("UK01", "Altair Cloud Ltd.", "GBP", "United Kingdom"),
-        ("DE01", "Altair Cloud GmbH", "EUR", "Germany"),
+        ("US01", "EZ Tech, Inc.", "USD", "United States"),
+        ("UK01", "EZ Tech Ltd.", "GBP", "United Kingdom"),
+        ("DE01", "EZ Tech GmbH", "EUR", "Germany"),
     ],
     columns=["entity", "entity_name", "currency", "country"],
 )
