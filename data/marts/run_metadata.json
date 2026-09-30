@@ -90,8 +90,8 @@
     "budget_wape": 0.1031,
     "improvement_vs_budget": 0.1956
   },
-  "last_run_utc": "2026-09-30 18:20 UTC",
-  "runtime_seconds": 160,
+  "last_run_utc": "2026-09-30 18:29 UTC",
+  "runtime_seconds": 197,
   "variance": {
     "current_month": {
       "Red": 0,
