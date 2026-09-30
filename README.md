@@ -68,7 +68,7 @@ flowchart LR
 
 ### Notebooks (the analysis story)
 1. [`01_data_exploration`](notebooks/01_data_exploration.ipynb): the raw extract, data quality, the P&L, seasonality, drivers, and how wrong the budget has historically been.
-2. [`02_forecast_backtesting`](notebooks/02_forecast_backtesting.ipynb): the tournament, accuracy vs budget by horizon, forecast vintages, outlier cleaning, and an **honest look at bias**.
+2. [`02_forecast_backtesting`](notebooks/02_forecast_backtesting.ipynb): the tournament, accuracy vs budget by horizon, forecast vintages, an **honest look at bias**, and the full-year landing estimate.
 3. [`03_variance_analysis`](notebooks/03_variance_analysis.ipynb): the radar, drill-downs, and **precision/recall against the answer key**, including the misses.
 
 ## Run it locally
