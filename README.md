@@ -2,8 +2,10 @@
 
 [![CI](https://github.com/eziquiolobao/FPA-ML-Forecast/actions/workflows/ci.yml/badge.svg)](https://github.com/eziquiolobao/FPA-ML-Forecast/actions/workflows/ci.yml)
 [![Monthly close](https://github.com/eziquiolobao/FPA-ML-Forecast/actions/workflows/monthly_close.yml/badge.svg)](https://github.com/eziquiolobao/FPA-ML-Forecast/actions/workflows/monthly_close.yml)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fpa-ml-forecast.streamlit.app)
 
-**Live dashboard → _link added after deployment_**
+**▶ Live dashboard: [fpa-ml-forecast.streamlit.app](https://fpa-ml-forecast.streamlit.app)**  
+<sub>Hosted free on Streamlit Community Cloud. If it has been idle it may take ~30 seconds to wake up.</sub>
 
 An end-to-end analytics project for **Financial Planning & Analysis (FP&A)**. It covers everything from a raw ERP general-ledger extract to a deployed dashboard that updates itself every month.
 
