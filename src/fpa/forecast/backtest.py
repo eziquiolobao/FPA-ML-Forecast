@@ -1,6 +1,6 @@
 """Rolling-origin backtest: replay past month-ends as if each were the latest close.
 
-For every origin we train only on data available at that date, forecast 12 months ahead with
+For every origin I train only on data available at that date, forecast 12 months ahead with
 every contender, and later score those forecasts against what actually happened. The same runs
 double as the history of forecast *vintages* shown in the app.
 

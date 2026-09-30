@@ -18,7 +18,7 @@ An end-to-end analytics project for **Financial Planning & Analysis (FP&A)**. It
 ## Why this matters
 
 Finance teams close the books every month and then answer two questions under time pressure:
-1. **Where will we land this year?** The annual budget is set once, in November, and goes stale quickly.
+1. **Where will the company land this year?** The annual budget is set once, in November, and goes stale quickly.
 2. **Which numbers are off, and why?** Scanning dozens of lines against budget by hand is slow, and the one-off error hides among normal noise.
 
 This project automates the first pass on both.

@@ -14,7 +14,7 @@ imp = load("lgb_importance").sort_values("gain_share")
 
 st.title("Model performance")
 st.markdown(
-    "Every line runs a **tournament** between six forecasting methods. We replay the last 24 month-ends as if each were "
+    "Every line runs a **tournament** between six forecasting methods. I replay the last 24 month-ends as if each were "
     "the latest close, forecast 12 months ahead, and score the forecasts against what actually happened. For each line the "
     "most accurate method becomes the **champion**, and near-ties go to the simpler method. Everything below is **out of sample**: "
     "no forecast was scored against data it had seen."

@@ -1,7 +1,7 @@
 """Dampen one-off spikes before training ("normalised actuals").
 
 FP&A teams routinely strip one-offs (a legal settlement, a duplicate invoice) out of history
-before projecting forward, because a one-off should not repeat in the forecast. We do the same
+before projecting forward, because a one-off should not repeat in the forecast. I do the same
 statistically: a robust STL decomposition splits each series into trend + seasonality + noise,
 and any month whose noise is more than `z` robust standard deviations from normal is capped.
 Recurring seasonal events (January renewals, the October conference) sit in the seasonal
