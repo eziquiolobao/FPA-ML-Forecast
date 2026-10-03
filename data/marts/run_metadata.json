@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-08",
+  "as_of": "2026-09",
   "company": "EZ Tech, Inc.",
   "generate": {
-    "gl_lines": 89049,
-    "journal_entries": 12865,
-    "periods": "2021-01..2026-08",
+    "gl_lines": 90841,
+    "journal_entries": 13085,
+    "periods": "2021-01..2026-09",
     "budgets": [
       2021,
       2022,
@@ -13,17 +13,17 @@
       2025,
       2026
     ],
-    "anomalies": 49,
-    "duplicated_extract_lines": 77,
-    "blank_cost_center": 38,
+    "anomalies": 50,
+    "duplicated_extract_lines": 81,
+    "blank_cost_center": 39,
     "invalid_cost_center": 15
   },
   "data_quality": {
-    "extract_duplicate_lines": 77,
-    "unbalanced_jes_before_dedupe": 73,
+    "extract_duplicate_lines": 81,
+    "unbalanced_jes_before_dedupe": 77,
     "unbalanced_jes_after_dedupe": 0,
     "control_total_breaks": 0,
-    "pnl_lines_blank_cost_center": 38,
+    "pnl_lines_blank_cost_center": 39,
     "pnl_lines_invalid_cost_center": 15,
     "possible_duplicate_invoices": [
       {
@@ -65,9 +65,9 @@
     ],
     "lines_posted_outside_close_window": 0,
     "vendor_name_variants": 53,
-    "rows_loaded": 89049,
-    "rows_after_dedupe": 88972,
-    "periods": "2021-01..2026-08"
+    "rows_loaded": 90841,
+    "rows_after_dedupe": 90760,
+    "periods": "2021-01..2026-09"
   },
   "reconciliation": {
     "gl_to_pnl_mart_diff_usd": 0.0,
@@ -75,39 +75,39 @@
     "fx_translation_rounding_max_usd": 0.11,
     "pnl_lines_without_department": 0,
     "pnl_lines_missing_fx": 0,
-    "cost_centers_imputed": 53
+    "cost_centers_imputed": 54
   },
   "forecast": {
     "champion_mix": {
-      "AutoETS": 13,
-      "AutoARIMA": 5,
-      "LightGBM": 4,
-      "Naive": 3,
+      "AutoETS": 14,
+      "AutoARIMA": 6,
+      "LightGBM": 3,
+      "Naive": 2,
       "SeasonalNaive": 1,
       "ARRRunRate": 1
     },
-    "rolling_forecast_wape": 0.0829,
-    "budget_wape": 0.1031,
-    "improvement_vs_budget": 0.1956
+    "rolling_forecast_wape": 0.0835,
+    "budget_wape": 0.1005,
+    "improvement_vs_budget": 0.1693
   },
-  "last_run_utc": "2026-09-30 18:39 UTC",
-  "runtime_seconds": 159,
+  "last_run_utc": "2026-10-03 15:49 UTC",
+  "runtime_seconds": 201,
   "variance": {
     "current_month": {
-      "Red": 0,
-      "Amber": 7,
-      "Green": 20
+      "Red": 1,
+      "Amber": 5,
+      "Green": 21
     },
     "evaluation": {
-      "window": "2025-09..2026-08",
+      "window": "2025-10..2026-09",
       "anomalies_in_window": 13,
-      "red_flags": 17,
-      "recall_red": 0.923,
-      "precision_red": 0.824,
+      "red_flags": 16,
+      "recall_red": 1.0,
+      "precision_red": 0.938,
       "recall_red_or_amber": 1.0,
-      "amber_flags": 63,
-      "precision_red_or_amber": 0.2
+      "amber_flags": 62,
+      "precision_red_or_amber": 0.205
     }
   },
-  "report": "reports/variance_pack_2026-08.xlsx"
+  "report": "reports/variance_pack_2026-09.xlsx"
 }
